@@ -1,7 +1,111 @@
-body{
+body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+}
+
+.main {
+    display: grid;
+    grid-template-areas:
+        "img img new"
+        "future p new"
+        "top-3 top-3 top-3"
+    ;
+}
+
+.main picture{
+    grid-area: img;
+}
+
+.main .img {
+    max-width: 73rem;
+}
+
+.main .future {
+    grid-area: future;
+    font-size: 6rem;
+    max-width: 30rem;
+    color: var(--Verydarkblue);
+}
+
+.main .p-button{
+    grid-area: p;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.p-button .p{
+    font-size: 1.8rem;
+    max-width: 34rem;
+    padding-top: 3.2rem;
+    color: var(--Darkgrayishblue);
+}
+
+.p-button .btn{
+    border: none;
+    width: 18.5rem;
+    background-color: var(--Softred);
+    color: var(--Off-white);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+    padding: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.p-button .btn:hover{
+    transition: 0.4s ease-in-out;
+    background-color: var(--Verydarkblue);
+}
+
+.main .new{
+    grid-area: new;
+    background-color: var(--Verydarkblue);
+}
+
+.main .top-3 {
+    grid-area: top-3;
+    display: grid;
+    grid-template-areas: 
+    "retro laptops gaming";
+}
+
+.top-3 img{
+    width: 10rem;
+}
+
+.top-3 .retro{
+    grid-area: retro;
+}
+
+.top-3 .laptops{
+    grid-area: laptops;
+}
+
+.top-3 .gaming {
+    grid-area: gaming;
+}
+
+.top-3 .retro, .laptops, .gaming{
+    display: flex;
+    gap: 1rem;
+}
+
+.top-3 .retro, .laptops, .gaming .number{
+    color: var(--Darkgrayishblue);
+}
+
+.top-3 .retro, .laptops, .gaming .p{
+    color: var(--Darkgrayishblue);
 }

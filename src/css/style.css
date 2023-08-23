@@ -4,13 +4,33 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'Inter', sans-serif;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 65%;
+    width: 112.5rem;
+    margin-bottom: 5rem;
+}
+
+.header .nav{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3.9rem;
+    margin-right: 1.6rem;
+}
+
+.header .nav a{
+    font-size: 1.5rem;
+    color: var(--Darkgrayishblue);
+    font-weight: 700;
+}
+
+.header .nav a:hover{
+    color: var(--Softred);
+    transition: 0.4s ease-in-out;
 }
 
 .main {
@@ -22,8 +42,9 @@ body {
     ;
 }
 
-.main picture{
+.main picture {
     grid-area: img;
+    max-width: 73rem;
 }
 
 .main .img {
@@ -32,26 +53,29 @@ body {
 
 .main .future {
     grid-area: future;
-    font-size: 6rem;
-    max-width: 30rem;
+    font-size: 5.9rem;
+    max-width: 32rem;
+    line-height: 5.5rem;
     color: var(--Verydarkblue);
+    margin-top: 3.4rem;
+    margin-bottom: 8.2rem;
 }
 
-.main .p-button{
+.main .p-button {
     grid-area: p;
-    margin-left: 7rem;
     display: flex;
     flex-direction: column;
 }
 
-.p-button .p{
-    font-size: 1.8rem;
+.p-button .p {
+    font-size: 1.5rem;
     max-width: 34rem;
-    padding-top: 3.2rem;
+    line-height: 2.4rem;
     color: var(--Darkgrayishblue);
+    margin: 3rem 0 4rem 0;
 }
 
-.p-button .btn{
+.p-button .btn {
     border: none;
     width: 18.5rem;
     background-color: var(--Softred);
@@ -64,48 +88,110 @@ body {
     cursor: pointer;
 }
 
-.p-button .btn:hover{
+.p-button .btn:hover {
     transition: 0.4s ease-in-out;
     background-color: var(--Verydarkblue);
 }
 
-.main .new{
+.main .new {
     grid-area: new;
     background-color: var(--Verydarkblue);
+    max-width: 35rem;
+    padding: 2.8rem 2.4rem 0 2.5rem;
+    height: 51rem;
+}
+
+.new .title {
+    color: var(--Softorange);
+    font-size: 4rem;
+    margin-bottom: 2.8rem;
+}
+
+.new .subtitle {
+    color: var(--Off-white);
+    font-size: 2rem;
+    margin-bottom: 1.1rem;
+    cursor: pointer;
+}
+
+.new .subtitle:hover{
+    color: var(--Softorange);
+    transition: 0.4s ease-in-out;
+}
+
+.new .p {
+    color: var(--Grayishblue);
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.new br {
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: var(--Grayishblue);
+    margin-bottom: 3rem;
 }
 
 .main .top-3 {
     grid-area: top-3;
     display: grid;
-    grid-template-areas: 
-    "retro laptops gaming";
+    grid-template-areas:
+        "retro laptops gaming";
+    max-width: 112.5rem;
 }
 
-.top-3 img{
+.top-3 img {
     width: 10rem;
 }
 
-.top-3 .retro{
+.top-3 .retro {
     grid-area: retro;
 }
 
-.top-3 .laptops{
+.top-3 .laptops {
     grid-area: laptops;
+    margin-left: 3.7rem;
 }
 
 .top-3 .gaming {
     grid-area: gaming;
+    margin-left: 4rem;
 }
 
-.top-3 .retro, .laptops, .gaming{
+.top-3 .retro,
+.laptops,
+.gaming {
     display: flex;
     gap: 1rem;
 }
 
-.top-3 .retro, .laptops, .gaming .number{
-    color: var(--Darkgrayishblue);
+.top-3 .right{
+    margin-left: 1.4rem;
 }
 
-.top-3 .retro, .laptops, .gaming .p{
+.top-3 .number {
     color: var(--Darkgrayishblue);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.top-3 .subtitle{
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--Verydarkblue);
+}
+
+.top-3 .subtitle:hover{
+    color: var(--Softred);
+    transition: 0.4s ease-in-out;
+}
+
+.top-3 .p {
+    color: var(--Darkgrayishblue);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    line-height: 3rem;
 }

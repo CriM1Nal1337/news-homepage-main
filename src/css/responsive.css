@@ -1,3 +1,50 @@
 @media (max-width: 1180px) {
-    
+    body{
+        height: auto;
+    }
+
+    .header .log{
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    .header .menu{
+        display: block;
+    }
+
+    .header .nav a{
+        display: none;
+    }
+
+    .header input:checked ~ a{
+        display: block;
+    }
+
+    .header .nav{
+        position: absolute;
+        top: 0.8rem;
+        right: -2rem;
+        z-index: 1;
+        height: 100vh;
+        flex-direction: column;
+        background-color: #fff;
+        padding-left: 2rem;
+        justify-content: flex-start;
+        width: 26rem;
+        padding-left: 2.5rem;
+        margin-top: 4.9rem;
+        gap: 2.8rem;
+    }
+
+    .header .nav a{
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+
+    .header .hamburguer{
+        top: -1.4rem;
+        left: 17.5rem;
+    }
+
 }

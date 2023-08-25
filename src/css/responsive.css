@@ -1,6 +1,8 @@
-@media (max-width: 1180px) {
+@media (max-width: 1180px) {    
     body{
-        max-width: 37.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .header {
         display: flex;

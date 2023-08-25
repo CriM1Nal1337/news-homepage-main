@@ -1,10 +1,10 @@
-.nav .menu{
+.nav .menu {
     display: none;
     width: 6rem;
     height: 6rem;
 }
 
-.header .hamburguer{
+.header .hamburguer {
     background-color: #000;
     position: relative;
     display: block;
@@ -13,10 +13,11 @@
     top: 29px;
     left: 15px;
     transition: 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .header .hamburguer:before,
-.header .hamburguer:after{
+.header .hamburguer:after {
     background-color: #000;
     content: "";
     display: block;
@@ -26,28 +27,74 @@
     transition: 0.2s ease-in-out;
 }
 
-.header .hamburguer:before{
+.header .hamburguer:before {
     top: -1rem;
 }
 
-.header .hamburguer:after{
+.header .hamburguer:after {
     bottom: -1rem;
 }
 
-.header input{
+.header input {
     display: none;
 }
 
-.header input:checked ~ label .hamburguer{
+.header input:checked~label .hamburguer {
     transform: rotate(45deg);
 }
 
-.header input:checked ~ label .hamburguer::before{
+.header input:checked~label .hamburguer::before {
     transform: rotate(90deg);
     top: 0;
 }
 
-.header input:checked ~ label .hamburguer::after{
+.header input:checked~label .hamburguer::after {
     transform: rotate(90deg);
     bottom: 0;
+}
+
+@media (max-width: 1180px) {
+    body {
+        height: auto;
+    }
+    .header .menu {
+        display: block;
+    }
+
+    .header .nav a {
+        display: none;
+    }
+
+    .header #menu-hamburguer:checked~a {
+        display: block;
+        margin-left: 2.4rem;
+    }
+
+    .header #menu-hamburguer:checked~a:last-child{
+        padding-bottom: 55rem;
+    }
+
+    .header .nav {
+        position: absolute;
+        top: -2rem;
+        right: 1.5rem;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 25rem;
+        margin-top: 8rem;
+        margin-right: -1rem;
+        gap: 2.8rem;
+        background-color: white;
+    }
+
+    .header .nav a {
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+
+    .header .hamburguer {
+        top: -1.9rem;
+        left: 20rem;
+    }
 }
